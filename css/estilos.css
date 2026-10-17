@@ -1,0 +1,207 @@
+
+.reseñas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px;
+}
+
+.reseñas h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.tarjeta {
+    width: 280px;
+    padding: 20px;
+    background-color: #fff0f5;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px #cccccc;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.tarjeta > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjeta h2 {
+    color: #8b4567;
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #e0c4d0;
+    padding-top: 15px;
+}
+
+.autor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.autor h3,
+.autor p {
+    margin: 4px 0;
+}
+
+.autor h3 {
+    font-size: 15px;
+}
+
+.autor p {
+    font-size: 12px;
+}
+
+
+
+
+.otros-modelos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.titulo-modelos {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #8b4567;
+}
+
+/* Modelo 2: reseñas pequeñas */
+
+.reseña-pequeña {
+    padding: 20px;
+    background-color: #fff0f5;
+    border: 1px solid #d8b9c7;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px #cccccc;
+}
+
+.reseña-pequeña > p {
+    line-height: 1.5;
+}
+
+/* Modelo 3: portada y texto al lado */
+
+.reseña-horizontal {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fae4ed;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px #cccccc;
+}
+
+.foto-libro {
+    width: 200px;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.contenido-reseña {
+    flex: 1;
+    min-width: 0;
+}
+
+.contenido-reseña h2 {
+    color: #8b4567;
+}
+
+.contenido-reseña > p {
+    line-height: 1.6;
+}
+
+
+
+.reseña-grande {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    background-color: #fff0f5;
+    border: 1px solid #d8b9c7;
+    border-radius: 18px;
+    box-shadow: 0 3px 8px #cccccc;
+}
+
+.reseña-grande > p {
+    max-width: 650px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+
+
+.libros-relacionados {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.libros-relacionados figure {
+    width: 110px;
+    margin: 0;
+}
+
+.libros-relacionados img {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.libros-relacionados figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+
+
+.autor-centro {
+    justify-content: center;
+    border-top: 1px solid #e0c4d0;
+    padding-top: 15px;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 650px) {
+    .otros-modelos {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .titulo-modelos,
+    .reseña-horizontal,
+    .reseña-grande {
+        grid-column: 1;
+    }
+
+    .reseña-horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-libro {
+        width: 180px;
+    }
+}
